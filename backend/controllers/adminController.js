@@ -23,7 +23,7 @@ export const uploadStudentEmails = async (req, res) => {
     const emails = sheetData.map(
       (row) => row.email || row.Email || row["E-mail"]
     );
-
+    console.log(emails);
     const uniqueEmails = [...new Set(emails)];
 
     await Promise.all(
