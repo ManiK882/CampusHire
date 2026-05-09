@@ -37,7 +37,7 @@ export const uploadStudentEmails = async (req, res) => {
         );
 
         const registerLink = `${process.env.CLIENT_URL}/register/${token}`;
-
+        console.log(registerLink);
         await sendEmail(email, registerLink);
       })
     );
