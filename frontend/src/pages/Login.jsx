@@ -28,9 +28,7 @@ function Login() {
     }
     
     try {
-    const res = await API.post("/auth/login", formData, {
-      withCredentials: true,
-    });
+    const res = await API.post("/auth/login", formData);
 
     const user = res.data.user;
 
