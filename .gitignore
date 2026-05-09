@@ -1,0 +1,19 @@
+# dependencies (both sides)
+node_modules/
+
+# env files (VERY IMPORTANT)
+.env
+frontend/.env
+backend/.env
+
+# builds
+dist/
+build/
+
+# logs
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/
+Thumbs.db
