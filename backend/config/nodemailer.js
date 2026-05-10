@@ -12,6 +12,16 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,      // app password (not normal password)
   },
   family:4,
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log("SMTP ERROR:", error);
+  } else {
+    console.log("SMTP READY");
+  }
+});
 export default transporter;
